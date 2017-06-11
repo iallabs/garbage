@@ -36,6 +36,14 @@ ALTER TABLE Test_tuto
   CHANGE old new VARCHAR(10) NOT NULL;
                   -- type
 
+-- insert beetwin 2rows
+UPDATE mytable SET id = id + 1 where id > 5 ORDER BY id ASC
+
+insert into mytable (id,..) values (6,...)
+--
+UPDATE TABLE table SET ID += 1 WHERE ID >= 9;
+INSERT INTO TABLE (ID, ...) VALUES (9, ...);
+
 -- PLANTAE EXAMPLE
 
 CREATE DATABASE testdb;
