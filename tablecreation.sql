@@ -1,3 +1,5 @@
+BEGIN;
+
 CREATE DATABASE database0;
 USE database0; /* use database */
 show tables;  /* show all table */
@@ -50,3 +52,5 @@ CREATE TABLE PLANTAE (
 INSERT INTO PLANTAE VALUES ('Plantae', 'Kingdom', '0');
 
 SELECT name, type, level FROM PLANTAE WHERE name='Plantae';
+
+COMMIT;
