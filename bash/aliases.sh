@@ -3,6 +3,8 @@ alias d='date +%F'
 alias now='date +"%T"'
 alias nowtime=now
 alias nowdate='date +"%m-%d-%Y"'
+# mysql as root
+alias mysqlr='sudo mysql -u root -p'
 #
 group () {
     mkdir -p $1
