@@ -1,4 +1,26 @@
 
+
+alias build='python3 setup.py install'
+
+buildir () {
+    cd $1
+    python setup.py install
+}
+
+download () {
+  if [ -f $1 ] ; then
+      # NAME=${1%.*}
+      # mkdir $NAME && cd $NAME
+      case $1 in
+        *.tar.bz2)   tar xvjf ../$1    ;;
+        *.tar.gz)    tar xvzf ../$1    ;;
+
+        *)           echo "extract: '$1' - unknown archive method" ;;
+      esac
+  else
+      echo "$1 - file does not exist"
+  fi
+}
 alias d='date +%F'
 alias now='date +"%T"'
 alias nowtime=now
@@ -40,6 +62,7 @@ mcd () {
     mkdir -p $1
     cd $1
 }
+
 
 function extract {
  if [ -z "$1" ]; then
