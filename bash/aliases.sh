@@ -1,26 +1,43 @@
 
 
 alias build='python3 setup.py install'
+alias build2='python2 setup.py install'
+alias projects='cd /home/ec2-user/projects'
+
+buildproject () {
+    cd $1
+    build
+}
+
+buildproject2() {
+    cd $1
+    build2
+}
+
+licapydb () {
+    python3 /home/ec2-user/projects/licapy-web-api/lwa/databases/cmdline.py $1
+}
 
 buildir () {
     cd $1
     python setup.py install
 }
 
-download () {
-  if [ -f $1 ] ; then
+getproject () {
+  if [ -z $1 ] ; then
       # NAME=${1%.*}
       # mkdir $NAME && cd $NAME
       case $1 in
-        *.tar.bz2)   tar xvjf ../$1    ;;
-        *.tar.gz)    tar xvzf ../$1    ;;
-
-        *)           echo "extract: '$1' - unknown archive method" ;;
+        lwa          git clone https://github.com/ImperialAlphaLab/licapy-web-api    ;;
+        licapy       git clone https://github.com/ImperialAlphaLab/licapy            ;;
+        shell-tools  git clone https://github.com/ImperialAlphaLab/shell-tools       ;;
+        *)           echo "unknoown" ;;
       esac
   else
       echo "$1 - file does not exist"
   fi
 }
+
 alias d='date +%F'
 alias now='date +"%T"'
 alias nowtime=now
@@ -28,6 +45,7 @@ alias nowdate='date +"%m-%d-%Y"'
 # mysql as root
 alias mysqlr='sudo mysql -u root -p'
 #
+
 group () {
     mkdir -p $1
     mv $2 $1
