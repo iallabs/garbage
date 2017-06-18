@@ -1,72 +1,9 @@
-sudo apt-get update
-5  sudo apt-get install python3
-   16  sudo apt-get install python-pip
-   17  sudo apt-get install python-pip3
-   18  sudo apt-get install python3-pip
-   19  sudo pip install django==1.5.5
-   20  sudo pip install django
-   21  export LC_ALL="en_US.UTF-8"
-   22  export LC_CTYPE="en_US.UTF-8"
-   23  sudo dpkg-reconfigure locales
-   24  sudo pip install django
-   25  sudo pip install --upgrade
-   26  sudo pip install --upgrade pip
-   27  ls
-   28  sudo pip3 install --upgrade pip
-   29  sudo pip3 install django
-   30  django-admin.py
-   31  django-admin.py startproject hello
-   32  ls
-   33  cd hello
-   34  sudo apt-get git
-   35  sudo apt-get install git
-   36  sudo apt-get install mysql
-   37  sudo apt-get install mysql-server
-   38  sudo apt-get install apache2
-   39  sudo apt-get install libapache2-mod-wsgi
-   40  sudo apt-get install libapache2-mod-wsgi-py3
-   41  ls
-   42  cd ..
-   43  ls
-   44  rm -rf hello
-   45  ls
-   46  git clone mysql -u root
-   47  mysql -u root
-   48  mysql -u root -p
-   49  git clone https://github.com/ImperialAlphaLab/epsirial.com
-   50  ls
-   51  cd
-   52  cd *
-   53  ls
-   54  cd mysite1
-   55  ls
-   56  cd ..
-   57  cp -rf mysite1 ..
-   58  ls
-   59  cd ..
-   60  ls
-   61  rm -rf epsirial
-   62  ls
-   63  rm -rf epsirial*
-   64  ls
-   65  cd *
-   66  ls
-   67  python3 manage.py makemigrations
-   68  cd mysite1
-   69  ls
-   70  nano settings.py
-   71  python3 manage.py makemigrations
-   72  cd ..
-   73  python3 manage.py makemigrations
-   74  pip3 install -r requirements.txt
-   75  sudo pip3 install -r requirements.txt
-   76  python3 manage.py makemigrations
-   77  sudo apt-get install MySQLdb
-   78  sudo apt-get install python-mysqldb
-   79  sudo apt-get install python3-mysqldb
-   80  ls
-   81  python3 manage.py makemigrations
-   82  python3 manage.py migrate
-   83  exit
-   84  ls
-   85  history
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+sudo apt-get install git
+sudo apt-get install mysql
+sudo apt-get install mysql-server
+sudo apt-get install apache2
+sudo apt-get install libapache2-mod-wsgi
+sudo apt-get install libapache2-mod-wsgi-py3
