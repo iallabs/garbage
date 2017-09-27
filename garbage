@@ -1,0 +1,5 @@
+#!/bin/bash
+
+GARBAGE_PKG="$HOME/GitHub/dev-garbage"
+
+bash "$GARBAGE_PATH/garbage.sh" "$@"
