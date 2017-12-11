@@ -1,0 +1,28 @@
+#!/bin/bash
+
+
+NUCLEUS="$HOME/Nucleus"
+NUCLEUS_INSTALLED="False"
+
+function make_nucleus () {
+    if [ -d $NUCLEUS ]; then
+        echo "Nucleus exists already"
+        exit 1
+    else
+        mkdir $NUCLEUS
+        mkdir $NUCLEUS/bin
+        mkdir $NUCLEUS/cache
+        mkdir $NUCLEUS/data
+        mkdir $NUCLEUS/lib
+        touch $NUCLEUS/.history
+        touch $NUCLEUS/.conf
+    fi
+}
+
+function make_nucleus_op () {
+    export PATH=$PATH:$NUCLEUS/bin
+}
+
+function nucleus_env () {
+    source $NUCLEUS_VENV/bin/activate
+}
